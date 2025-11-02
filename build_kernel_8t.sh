@@ -43,15 +43,15 @@ seconds=$((duration % 60))
 # 打印运行时间
 echo "脚本运行时间为：${hours}小时 ${minutes}分钟 ${seconds}秒"
 
-if [ -f out/arch/arm64/boot/Image.gz ]; then
+if [ -f out/arch/arm64/boot/Image ]; then
 	echo "***Packing kernel...***"
-	cp out/arch/arm64/boot/Image.gz tools/AnyKernel3/Image.gz
+	cp out/arch/arm64/boot/Image tools/AnyKernel3/Image
 	cp -vf tools/AnyKernel3_sh/anykernel.sh tools/AnyKernel3/
 	cd tools/AnyKernel3
 	zip -r9 OnePlus-8T-LOS-23.0-${end_time}.zip * > /dev/null
 	cd ../..
 	mv tools/AnyKernel3/OnePlus-8T-LOS-23.0-${end_time}.zip OnePlus-8T-LOS-23.0-${end_time}.zip
-	rm -rf tools/AnyKernel3/Image.gz
+	rm -rf tools/AnyKernel3/Image
 	echo "***Sucessfully built kernel...***"
 	echo " "
 	# git reset --hard
