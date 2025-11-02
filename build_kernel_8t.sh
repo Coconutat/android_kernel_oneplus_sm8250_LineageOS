@@ -24,7 +24,7 @@ start_time=$(date +%Y.%m.%d-%I_%M)
 
 start_time_sum=$(date +%s)
 
-make ARCH=arm64 O=out CC="ccache clang" vendor/kona-perf_defconfig vendor/oplus.config
+make ARCH=arm64 O=out CC="ccache clang" vendor/kona-perf_defconfig vendor/oplus.config vendor/suksisu.config
 # 定义编译线程数
 make ARCH=arm64 O=out CC="ccache clang" -j$(nproc --all) 2>&1 | tee kernel_log-${start_time}.log
 

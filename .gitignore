@@ -141,6 +141,7 @@ kernel/configs/android-*.cfg
 Android.bp
 
 # Personal
+out
 *.log
 KernelSU
 drivers/KernelSU
