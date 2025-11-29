@@ -46,7 +46,6 @@ echo "脚本运行时间为：${hours}小时 ${minutes}分钟 ${seconds}秒"
 if [ -f out/arch/arm64/boot/Image ]; then
 	echo "***Packing kernel...***"
 	cp out/arch/arm64/boot/Image tools/AnyKernel3/Image
-	rm -rf tools/AnyKernel3/ramdisk
 	cp -vf tools/AnyKernel3_sh/anykernel.sh tools/AnyKernel3/
 	cd tools/AnyKernel3
 	zip -r9 OnePlus-8T-LOS-23.0-${end_time}.zip * > /dev/null
