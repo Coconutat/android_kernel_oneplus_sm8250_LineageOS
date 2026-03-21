@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=OnePlus 8T LineageOS23.0 SukiSU Kernel by Coconutat @Github 
+kernel.string=OnePlus 8T LineageOS23.x ReSukiSU with KPM and SUSFS Kernel by Coconutat @Github 
 do.devicecheck=0
 do.modules=0
 do.systemless=0
